@@ -1,0 +1,12 @@
+Package: iSPREADR
+Title: imProved Spatial Regression Analysis for DTI Data in R
+Version: 0.2
+Author: Xing Qiu
+Description: This package provides a multi-dimensional kernel smoother, as well as an anisotropic smoother based on Perona-Malik eqation and some tools for hypothesis testing based on resampling techniques. Although this package is designed with diffusion tensor imaging data as a model data, it may be used to detect significantly different regions for other types of multi-dimensional, large scale spatial data.  Since this package is designed for analyzing large data (about 2M data points) by resampling method, computational efficiency has very high priority.  The current implementation depends on the implicit parallelization provided by foreach and doMC packages.
+Maintainer: Yu Gu <yu_gu@urmc.rochester.edu>, Xing Qiu <xing.qiu@gmail.com>
+Depends: R (>= 3.0.0), foreach, doParallel, R.utils
+Suggests: gld, sn, fields, doMC, oro.nifti
+Imports: 
+Enhances:
+License: GPL (>= 2)
+LazyLoad: yes

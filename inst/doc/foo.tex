@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \VignetteIndexEntry{Multiple Testing Procedures}
+% \VignetteKeywords{Expression Analysis}
+% \VignettePackage{multtest}
+
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}    % standard LaTeX graphics tool
+\usepackage{Sweave}
+\usepackage{amsfonts}
+
+% these should probably go into a dedicated style file
+\newcommand{\Rpackage}[1]{\textit{#1}}
+\newcommand{\Robject}[1]{\texttt{#1}}
+\newcommand{\Rclass}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Our added packages and definitions
+ 
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{comment}
+\usepackage[authoryear,round]{natbib}
+
+\parindent 0in
+
+\definecolor{red}{rgb}{1, 0, 0}
+\definecolor{green}{rgb}{0, 1, 0}
+\definecolor{blue}{rgb}{0, 0, 1}
+\definecolor{myblue}{rgb}{0.25, 0, 0.75}
+\definecolor{myred}{rgb}{0.75, 0, 0}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{purple}{rgb}{0.65, 0, 0.75}
+\definecolor{orange}{rgb}{1, 0.65, 0}
+
+\def\RR{\mbox{\it I\hskip -0.177em R}}
+\def\ZZ{\mbox{\it I\hskip -0.177em Z}}
+\def\NN{\mbox{\it I\hskip -0.177em N}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{procedure}{Procedure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title{A Title} 
+\author{Xing Qiu$^1$, Rui Hu$^2$} 
+\maketitle
+
+\begin{center}
+  1. Department of Biostatistics and Computational Biology, University of Rochester, \url{ http://lowelab.ucsc.edu/katie/}\\
+  2. Department of Biostatistics and Computational Biology, University of Rochester, \url{ http://lowelab.ucsc.edu/katie/}\\
+\end{center}
+
+\tableofcontents
+
+\label{anal:mult:multtest}
+
+\section{Introduction}
+\label{anal:mult:s:intro}
+
+\subsection{Overview}
+The R package \Rpackage{foo} implements  .... 
+
+The current version of \Rpackage{foo} provides ....
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Motivation}
+
+\begin{itemize}
+\item .
+\end{itemize}
+
+This package provides software implementations of the above ....
+
+\subsection{Outline}
+
+The present vignette provides a summary of ....
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Methods}
+\label{anal:mult:s:methods}
+
+\subsection{bar1}
+\label{anal:mult:s:framework}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{bar2}
+\label{anal:mult:s:nullDistn}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Software implementation}
+\label{anal:mult:s:software}
+
+\subsection{Overview}
+
+The following example illustrates how to ....
+
+\begin{Schunk}
+\begin{Sinput}
+> library(snow)
+> cl <- makeCluster(2, "MPI")
+> clusterEvalQ(cl, {
++     library(Biobase)
++     library(multtest)
++ })
+\end{Sinput}
+\end{Schunk}
+
+\Robject{get.cr} and \Robject{get.cutoff} should be set to
+\Robject{FALSE} when ....
+
+\section{Discussion}
+\label{anal:mult:s:disc}
+
+The \Rpackage{foo} package ...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plainnat}
+
+\bibliography{xing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

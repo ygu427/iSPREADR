@@ -1,0 +1,35 @@
+* Introduction
+
+iSPREADR is an R package which provides a multi-dimensional kernel smoother and an anisotropic smoother based on Perona-Malik equation, and some tools for hypothesis testing based on resampling techniques. Although this package is designed with diffusion tensor imaging data as a model data, it may be used to detect significantly different regions for other types of multi-dimensional, large scale spatial data.
+
+* Installation
+  - Since iSPREADR is not hosted on CRAN yet, you can not install it
+    by the usual R function install.packages("iSPREADR").
+  - You can obtain the most up-to-date source code from the project's homepage at https://github.com/qiuxing/iSPREADR or by running the following command 
+
+    git clone git://github.com/qiuxing/iSPREADR.git
+    
+  - You must have R >= 3.0.0 installed, together with the following two R packages: foreach and doMC.
+  - Certain generalized bootstrap options (method=sn or gld, see help for pre.post.test and rep.test for more details) depends on optional R packages sn and gld.  You don't need to install these packages to run iSPREADR and don't worry if you don't know what generalized bootstrap is: most people don't use them anyway.
+  - Since this package contains a small C program, a valid C compiler
+    must be installed first.  You also need to install a LaTeX
+    distribution and some other command line tools. On a Debian/Ubuntu
+    based system, the following command will ensure all the necessary
+    tools installed properly
+
+    sudo apt-get install r-base r-base-dev
+
+    Please consult http://cran.r-project.org/doc/manuals/R-admin.html
+    for more details about how to install from a source package on
+    your platform.
+  - Once all the dependencies are met, use the following command to
+    build and check the iSPREADR package (suppose the iSPREADR
+    directory is in your present working directory)
+
+    R CMD build iSPREADR && R CMD check iSPREADR
+
+  - If everything looks OK, R will produce a compressed file
+    iSPREADR_x.x.x.tar.gz in your working directory.  Run the
+    following command to install it
+
+    R CMD INSTALL iSPREADR_x.x.x.tar.gz

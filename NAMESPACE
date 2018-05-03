@@ -1,0 +1,9 @@
+## automatically load pkg1 and pkg2
+## import(foreach, doMC, gld, sn)
+
+## Only export these objs to the search path for the end user
+## export(obj1, obj2)
+export(MountDoom, foreground, artifacts, Ndist, RNdist, Ndist.perm, RNdist.perm, flip, spatial.perm, genboot.test, rev.rank, arrays2tab, tab2arrays, Smooth, pre.post.test, rep.test)
+
+# Refer to all C/Fortran routines by their name prefixed by R_
+useDynLib(iSPREADR, .registration = TRUE, .fixes = "R_")
